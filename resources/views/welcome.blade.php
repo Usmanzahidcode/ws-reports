@@ -15,9 +15,9 @@
     <title>Document</title>
 </head>
 <body>
-<div class="container">
+<div class="has-background-dark">
     <nav
-        class="navbar py-3 px-5 is-flex is-flex-direction-column is-justify-content-space-between has-background-dark"
+        class="navbar container has-background-dark px-5 py-3 is-flex is-flex-direction-row is-justify-content-space-between"
         role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item has-text-black-bold title is-3" href="#">
@@ -35,7 +35,7 @@
                     Documentation
                 </a>
 
-                <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-item has-background-dark has-dropdown is-hoverable">
                     <a class="navbar-link">
                         More
                     </a>
@@ -44,7 +44,7 @@
                         <a class="navbar-item">
                             About
                         </a>
-                        <a class="navbar-item is-selected">
+                        <a class="navbar-item">
                             Jobs
                         </a>
                         <a class="navbar-item">
