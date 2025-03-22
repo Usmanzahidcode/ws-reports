@@ -15,7 +15,7 @@
     <title>Document</title>
 </head>
 <body>
-<div class="">
+<div class="bg-wrapper has-background-dark">
     <nav
         class="navbar is-dark container  px-5 py-3 is-flex is-flex-direction-row is-justify-content-space-between"
         role="navigation" aria-label="main navigation">
@@ -71,98 +71,36 @@
 
 <div class="container p-6">
     <div class="content">
-        <h1 class="title is-1">WsReports</h1>
-        <p class="subtitle">An internal reporting tool designed to streamline data collection, management, and reporting for WsStack projects.</p>
+        <h1 class="title is-1">Welcome to WsReports</h1>
+        <p class="subtitle">Efficient Reporting for a Streamlined Workflow</p>
 
-        <p>
-            WsReports empowers teams to create dynamic forms, collect structured data, and generate insightful reports with minimal effort.
-        </p>
+        <p>WsReports is designed to help our team stay organized, track progress, and ensure that all project-related information is documented accurately. It simplifies the reporting process, allowing every team member to focus on their work without the hassle of managing scattered data.</p>
 
-        <h2 class="title is-2">Project Mission</h2>
-        <p>
-            The goal is to provide an **efficient** and **scalable** solution for creating, managing, and analyzing project-related reports. This system allows teams to:
-        </p>
+        <h2 class="title is-2">For Employees</h2>
+        <p>As a key part of the team, your role is crucial in keeping records accurate and up to date. The platform allows you to:</p>
         <ul>
-            <li>📝 **Create Custom Forms** – Define sections, fields, and validation rules.</li>
-            <li>📊 **Collect & Manage Data** – Employees submit structured reports seamlessly.</li>
-            <li>📑 **Generate Reports** – Export and analyze collected data effectively.</li>
+            <li>Fill out assigned reports quickly and efficiently.</li>
+            <li>Submit daily, weekly, or project-specific updates.</li>
+            <li>Access past reports for reference whenever needed.</li>
+            <li>Ensure all necessary details are captured for review.</li>
         </ul>
+        <p>Your input is essential in maintaining transparency and keeping operations running smoothly.</p>
 
-        <blockquote>
-            "A system should empower the user, not burden them with complexity."
-            <br><cite>- Usman Zahid</cite>
-        </blockquote>
+        <h2 class="title is-2">For Admins and Team Leads</h2>
+        <p>As an Admin or Team Lead, your role involves overseeing reports and ensuring that submitted data is complete and accurate. With WsReports, you can:</p>
+        <ul>
+            <li>Review submitted reports in an organized format.</li>
+            <li>Identify any missing or incorrect information.</li>
+            <li>Provide feedback and request updates where necessary.</li>
+            <li>Generate reports for performance tracking and decision-making.</li>
+        </ul>
+        <p>By keeping reports structured and accessible, you help create a transparent and accountable workflow.</p>
 
-        <h3 class="title is-3">Example Form</h3>
+        <h2 class="title is-2">Why This Matters</h2>
+        <p>Accurate reporting is not just about filling out forms—it’s about keeping our projects on track, ensuring deadlines are met, and maintaining high standards of work. Your contributions to WsReports make a difference in the overall efficiency of the company.</p>
 
-        <div class="field">
-            <label class="label">Project Name</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Enter project name">
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">Assigned Employee</label>
-            <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="Enter employee name">
-                <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-            </span>
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">Project Type</label>
-            <div class="control">
-                <div class="select">
-                    <select>
-                        <option>Amazon Product Research</option>
-                        <option>Keyword Analysis</option>
-                        <option>Performance Review</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">Report Details</label>
-            <div class="control">
-                <textarea class="textarea" placeholder="Enter report details"></textarea>
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">Status</label>
-            <div class="control">
-                <label class="radio">
-                    <input type="radio" name="status">
-                    Pending
-                </label>
-                <label class="radio">
-                    <input type="radio" name="status">
-                    Completed
-                </label>
-            </div>
-        </div>
-
-        <div class="field">
-            <div class="control">
-                <label class="checkbox">
-                    <input type="checkbox">
-                    I confirm the accuracy of this report.
-                </label>
-            </div>
-        </div>
-
-        <div class="field is-grouped">
-            <div class="control">
-                <button class="button is-link">Submit Report</button>
-            </div>
-            <div class="control">
-                <button class="button is-link is-light">Cancel</button>
-            </div>
-        </div>
+        <h2 class="title is-2">A Collaborative Effort</h2>
+        <p>At the core of WsReports is a commitment to teamwork. Every report you submit, review, or manage plays a role in the bigger picture. By working together, we can ensure smooth operations, effective communication, and continuous improvement.</p>
     </div>
 
 </div>
