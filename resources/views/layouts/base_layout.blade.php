@@ -6,13 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    {{-- Bulma Css --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-
+    {{-- Awesome fonts --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
           crossorigin="anonymous"
           referrerpolicy="no-referrer"/>
-    
+
+    {{-- Core Css --}}
+    <link rel="stylesheet" href="app.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -70,7 +74,7 @@
     </nav>
 </div>
 
-{{-- Current homepage --}}
+{{-- Current Dummy homepage --}}
 <div class="container p-6">
     <div class="content">
         <h1 class="title is-1">Welcome to WsReports</h1>
