@@ -20,7 +20,9 @@
     {{-- Page specific css --}}
     @stack('styles')
 
-    <title>Document</title>
+    <title>
+        @yield('title')
+    </title>
 </head>
 <body>
 
@@ -80,7 +82,7 @@
 </div>
 
 {{-- Main Page Content --}}
-<div class="container p-6">
+<div class="page-wrapper container p-6 is-flex is-flex-direction-column is-justify-content-center">
     @yield('page')
 </div>
 

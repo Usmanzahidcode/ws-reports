@@ -4,98 +4,74 @@
 
 @endpush
 
+@section('title')
+    Register | {{ config('app.name') }}
+@endsection
+
 @section('page')
-    <div class="page-wrapper px-6 mx-6">
-        <h3 class="title is-3">Register</h3>
-        <p class="subtitle">After making an account you can start working on the projects in WsStack.</p>
+    <div class="columns">
+        <div class="column"></div>
+        <div class="column is-6">
+            <h3 class="title is-3">Register</h3>
+            <p class="subtitle">After making an account you can start working on the projects in WsStack.</p>
 
-        <form action="#" method="post">
-            <div class="field">
-                <label class="label">Name</label>
-                <div class="control">
-                    <input class="input" type="text" placeholder="Text input">
-                </div>
-            </div>
-
-            <div class="field">
-                <label class="label">Username</label>
-                <div class="control has-icons-left has-icons-right">
-                    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-                    <span class="icon is-small is-left">
-      <i class="fas fa-user"></i>
-    </span>
-                    <span class="icon is-small is-right">
-      <i class="fas fa-check"></i>
-    </span>
-                </div>
-                <p class="help is-success">This username is available</p>
-            </div>
-
-            <div class="field">
-                <label class="label">Email</label>
-                <div class="control has-icons-left has-icons-right">
-                    <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-                    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-                    <span class="icon is-small is-right">
-      <i class="fas fa-exclamation-triangle"></i>
-    </span>
-                </div>
-                <p class="help is-danger">This email is invalid</p>
-            </div>
-
-            <div class="field">
-                <label class="label">Subject</label>
-                <div class="control">
-                    <div class="select">
-                        <select>
-                            <option>Select dropdown</option>
-                            <option>With options</option>
-                        </select>
+            <form action="#" method="post">
+                <div class="field-body mb-4">
+                    <div class="field">
+                        <label class="label">First Name</label>
+                        <div class="control">
+                            <input name="first_name" class="input" type="text" placeholder="Irfan">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Last Name</label>
+                        <div class="control">
+                            <input name="last_name" class="input" type="text" placeholder="Ahmad">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="field">
-                <label class="label">Message</label>
-                <div class="control">
-                    <textarea class="textarea" placeholder="Textarea"></textarea>
+                <div class="field mb-4">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left">
+                        <input name="email" class="input" type="email" placeholder="irfanahmad@gmail.com">
+                        <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    </div>
+                    {{--                <p class="help is-danger">This email is invalid</p>--}}
                 </div>
-            </div>
 
-            <div class="field">
-                <div class="control">
-                    <label class="checkbox">
-                        <input type="checkbox">
-                        I agree to the <a href="#">terms and conditions</a>
-                    </label>
+                <div class="field mb-4">
+                    <label class="label">Password</label>
+                    <div class="control has-icons-left">
+                        <input name="password" class="input" type="password" placeholder="********">
+                        <span class="icon is-small is-left">
+                        <i class="fas fa-shield"></i>
+                    </span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="field">
-                <div class="control">
-                    <label class="radio">
-                        <input type="radio" name="question">
-                        Yes
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="question">
-                        No
-                    </label>
+                <div class="field mb-4">
+                    <label class="label">Confirm Password</label>
+                    <div class="control has-icons-left">
+                        <input name="password_confirmation" class="input" type="password" placeholder="********">
+                        <span class="icon is-small is-left">
+                        <i class="fas fa-shield"></i>
+                    </span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="field is-grouped">
-                <div class="control">
-                    <button class="button is-link">Submit</button>
-                </div>
-                <div class="control">
-                    <button class="button is-link is-light">Cancel</button>
-                </div>
-            </div>
-        </form>
 
+                <div class="field mb-4">
+                    <div class="control">
+                        <button class="button is-link" type="submit">Register</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="column"></div>
     </div>
 @endsection
 
