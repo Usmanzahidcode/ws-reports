@@ -68,10 +68,10 @@
                 @guest
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a class="button">
+                            <a class="button" href="{{ route('auth.register.form') }}">
                                 <strong>Sign up</strong>
                             </a>
-                            <a class="button is-light">
+                            <a class="button is-light" href="{{ route('auth.login.form') }}">
                                 Log in
                             </a>
                         </div>

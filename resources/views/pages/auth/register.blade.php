@@ -22,36 +22,51 @@
                     <div class="field">
                         <label class="label">First Name</label>
                         <div class="control">
-                            <input name="first_name" class="input" type="text" placeholder="Irfan">
+                            <input name="first_name" class="input @error('first_name') is-danger @enderror" type="text"
+                                   placeholder="Irfan">
                         </div>
+                        @error('first_name')
+                        <p class="help is-danger">{{ $message }}</p>
+                        @enderror
                     </div>
                     <div class="field">
                         <label class="label">Last Name</label>
                         <div class="control">
-                            <input name="last_name" class="input" type="text" placeholder="Ahmad">
+                            <input name="last_name" class="input @error('last_name') is-danger @enderror" type="text"
+                                   placeholder="Ahmad">
                         </div>
+                        @error('last_name')
+                        <p class="help is-danger">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
 
                 <div class="field mb-4">
                     <label class="label">Email</label>
                     <div class="control has-icons-left">
-                        <input name="email" class="input" type="email" placeholder="irfanahmad@gmail.com">
+                        <input name="email" class="input @error('email') is-danger @enderror" type="email"
+                               placeholder="irfanahmad@gmail.com">
                         <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>
                     </div>
-                    {{--                <p class="help is-danger">This email is invalid</p>--}}
+                    @error('email')
+                    <p class="help is-danger">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="field mb-4">
                     <label class="label">Password</label>
                     <div class="control has-icons-left">
-                        <input name="password" class="input" type="password" placeholder="********">
+                        <input name="password" class="input @error('password') is-danger @enderror" type="password"
+                               placeholder="********">
                         <span class="icon is-small is-left">
-                        <i class="fas fa-shield"></i>
-                    </span>
+                            <i class="fas fa-shield"></i>
+                        </span>
                     </div>
+                    @error('password')
+                    <p class="help is-danger">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="field mb-4">
