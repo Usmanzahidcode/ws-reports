@@ -15,7 +15,9 @@
             <h3 class="title is-3">Register</h3>
             <p class="subtitle">After making an account you can start working on the projects in WsStack.</p>
 
-            <form action="#" method="post">
+            <form action="{{ route('auth.register.submit') }}" method="POST">
+                @csrf
+
                 <div class="field-body mb-4">
                     <div class="field">
                         <label class="label">First Name</label>
