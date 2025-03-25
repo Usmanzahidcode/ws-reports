@@ -38,8 +38,8 @@
                     <div class="control has-icons-left">
                         <input name="email" class="input" type="email" placeholder="irfanahmad@gmail.com">
                         <span class="icon is-small is-left">
-                        <i class="fas fa-envelope"></i>
-                    </span>
+                            <i class="fas fa-envelope"></i>
+                        </span>
                     </div>
                     {{--                <p class="help is-danger">This email is invalid</p>--}}
                 </div>
