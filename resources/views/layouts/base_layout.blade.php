@@ -20,15 +20,16 @@
     {{-- Page specific css --}}
     @stack('styles')
 
-    <title>Document</title>
+    <title>
+        @yield('title')
+    </title>
 </head>
 <body>
 
 {{-- Navbar (Header)--}}
 <div class="nav-bg-wrapper has-background-dark">
-    <nav
-        class="navbar is-dark container py-3 is-flex is-flex-direction-row is-justify-content-space-between"
-        role="navigation" aria-label="main navigation">
+    <nav class="navbar container is-dark py-3 is-flex is-flex-direction-row is-justify-content-space-between"
+         role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item has-text-black-bold title is-3" href="#">
                 📃️WsReports
@@ -64,23 +65,37 @@
                 </div>
             </div>
             <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-primary">
-                            <strong>Sign up</strong>
-                        </a>
-                        <a class="button is-light">
-                            Log in
+                @guest
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button" href="{{ route('auth.register.form') }}">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-light" href="{{ route('auth.login.form') }}">
+                                Log in
+                            </a>
+                        </div>
+                    </div>
+                @endguest
+
+                @auth
+                    <div class="navbar-item">
+                        <a class="button">
+                            <span class="icon is-small">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span>Manage Account</span>
                         </a>
                     </div>
-                </div>
+
+                @endauth
             </div>
         </div>
     </nav>
 </div>
 
 {{-- Main Page Content --}}
-<div class="container p-6">
+<div class="page-wrapper container p-6 is-flex is-flex-direction-column is-justify-content-center">
     @yield('page')
 </div>
 

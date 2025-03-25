@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // Homepage
-Route::get('/', fn() => view('homepage'));
+Route::get('/', fn() => view('homepage'))->name('home');
 
 // Auth Routes
 Route::group(['as' => 'auth.', 'prefix' => 'auth'], function () {
