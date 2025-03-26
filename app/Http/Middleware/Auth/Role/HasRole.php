@@ -10,11 +10,14 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Response as ResponseCodes;
 
 class HasRole {
-    public function handle(Request $request, Closure $next, UserRole $role): Response {
-        if (Auth::user()->hasRole($role)) {
-            return $next($request);
+    public function handle(Request $request, Closure $next, string $role): Response {
+        $roleEnum = UserRole::tryFrom($role);
+
+        if (!$roleEnum || !Auth::user()->hasRole($roleEnum)) {
+            abort(ResponseCodes::HTTP_FORBIDDEN);
         }
 
-        abort(ResponseCodes::HTTP_FORBIDDEN);
+        return $next($request);
     }
+
 }
