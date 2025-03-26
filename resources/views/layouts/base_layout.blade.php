@@ -69,7 +69,7 @@
                     <div class="navbar-item">
                         <div class="buttons">
                             <a class="button" href="{{ route('auth.register.form') }}">
-                                <strong>Sign up</strong>
+                                <strong>Register</strong>
                             </a>
                             <a class="button is-light" href="{{ route('auth.login.form') }}">
                                 Log in
@@ -96,6 +96,14 @@
 
 {{-- Main Page Content --}}
 <div class="page-wrapper container p-6 is-flex is-flex-direction-column is-justify-content-center">
+    @session('success')
+    <p class="notification is-success">{{ session('success') }}</p>
+    @endsession
+
+    @session('error')
+    <p class="notification is-danger">{{ session('error') }}</p>
+    @endsession
+
     @yield('page')
 </div>
 
