@@ -3,8 +3,15 @@
 namespace App\Traits;
 
 use App\Enums\User\UserRole;
+use App\Models\Auth\Role;
 
 trait HasRoles {
+    public function assignRole(UserRole $role): void {
+        if (!$this->hasRole($role)) {
+            $this->roles()->attach(Role::where('name', $role->value)->value('roles.id'));
+        }
+    }
+
     public function hasRole(UserRole $role): bool {
         return $this->roles->contains('name', $role->value);
     }
