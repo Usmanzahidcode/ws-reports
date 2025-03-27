@@ -11,7 +11,7 @@ Route::get('/', fn() => view('homepage'))->name('home');
 Route::group(['middleware' => ['authenticated', 'role:employee']], function () {});
 
 // Guest Routes (Need no authentication)
-Route::group([], function () {
+Route::group(['middleware' => ['guest']], function () {
     // Auth Routes
     Route::group(['as' => 'auth.', 'prefix' => 'auth'], function () {
         Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.form');
