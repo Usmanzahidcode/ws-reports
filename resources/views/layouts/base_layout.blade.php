@@ -71,7 +71,7 @@
                             <a class="button" href="{{ route('auth.register.form') }}">
                                 <strong>Register</strong>
                             </a>
-                            <a class="button is-light" href="{{ route('auth.login.form') }}">
+                            <a class="button is-success is-dark" href="{{ route('auth.login.form') }}">
                                 Log in
                             </a>
                         </div>
@@ -80,12 +80,21 @@
 
                 @auth
                     <div class="navbar-item">
-                        <a class="button">
-                            <span class="icon is-small">
-                                <i class="fas fa-user"></i>
-                            </span>
-                            <span>Manage Account</span>
-                        </a>
+                        <div class="buttons">
+                            <a class="button">
+                                <span class="icon is-small">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                                <span>Manage Account</span>
+                            </a>
+                            <form action="{{ route('auth.logout.submit') }}" method="POST">
+                                @csrf
+
+                                <button class="button is-danger is-dark" type="submit">
+                                    Logout
+                                </button>
+                            </form>
+                        </div>
                     </div>
 
                 @endauth

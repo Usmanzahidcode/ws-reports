@@ -9,8 +9,9 @@ Route::get('/', fn() => view('homepage'))->name('home');
 
 // Authenticated routes
 Route::group(['middleware' => ['authenticated', 'role:employee']], function () {
-    Route::get('/auth-test', function () {
-        return "Reached";
+    // Auth routes
+    Route::group(['as' => 'auth.', 'prefix' => 'auth'], function () {
+        Route::post('/logout', [AuthController::class, 'logout'])->name('logout.submit');
     });
 });
 
@@ -23,8 +24,6 @@ Route::group(['middleware' => ['guest']], function () {
 
         Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register.form');
         Route::post('/register', [AuthController::class, 'register'])->name('register.submit');
-
-        Route::post('/logout', [AuthController::class, 'logout'])->name('logout.submit');
     });
 });
 
