@@ -6,14 +6,13 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Response as ResponseCodes;
 
 class EnsureAuthenticated {
     public function handle(Request $request, Closure $next): Response {
-        if (Auth::check()) {
-            return $next($request);
+        if (!Auth::check()) {
+            return redirect()->route('auth.login.form');
         }
 
-        abort(ResponseCodes::HTTP_UNAUTHORIZED);
+        return $next($request);
     }
 }

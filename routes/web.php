@@ -8,7 +8,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', fn() => view('homepage'))->name('home');
 
 // Authenticated routes
-Route::group(['middleware' => ['authenticated', 'role:employee']], function () {});
+Route::group(['middleware' => ['authenticated', 'role:employee']], function () {
+    Route::get('/auth-test', function () {
+        return "Reached";
+    });
+});
 
 // Guest Routes (Need no authentication)
 Route::group(['middleware' => ['guest']], function () {
