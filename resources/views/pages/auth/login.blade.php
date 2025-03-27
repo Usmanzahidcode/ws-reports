@@ -55,7 +55,7 @@
 
                 <div class="field mb-4">
                     <div class="control">
-                        <button class="button is-link" type="submit">Login</button>
+                        <button class="button is-success is-dark" type="submit">Login</button>
                     </div>
                 </div>
             </form>

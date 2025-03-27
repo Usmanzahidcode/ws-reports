@@ -8,10 +8,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', fn() => view('homepage'))->name('home');
 
 // Authenticated routes
-Route::group(['middleware' => ['authenticated', 'role:employee']], function () {});
+Route::group(['middleware' => ['authenticated', 'role:employee']], function () {
+    // Auth routes
+    Route::group(['as' => 'auth.', 'prefix' => 'auth'], function () {
+        Route::post('/logout', [AuthController::class, 'logout'])->name('logout.submit');
+    });
+});
 
 // Guest Routes (Need no authentication)
-Route::group([], function () {
+Route::group(['middleware' => ['guest']], function () {
     // Auth Routes
     Route::group(['as' => 'auth.', 'prefix' => 'auth'], function () {
         Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.form');
@@ -19,8 +24,6 @@ Route::group([], function () {
 
         Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register.form');
         Route::post('/register', [AuthController::class, 'register'])->name('register.submit');
-
-        Route::post('/logout', [AuthController::class, 'logout'])->name('logout.submit');
     });
 });
 
